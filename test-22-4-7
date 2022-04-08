@@ -173,3 +173,31 @@ int main()
 	printf("%d\n", SECREAT);
 		return 0;
 }
+
+
+
+选择和循环结构
+int main()
+{
+	int ret = 0;
+	int ch = 0;
+	char password[20] = {0};
+	printf("请输入密码:>");
+	scanf("%s", password);
+	while((ch=getchar()) != '\n')
+	{
+		;
+	}
+	//getchar();
+	printf("请确认(Y/N):>");
+	ret = getchar();
+	if(ret == 'Y')
+	{
+		printf("确认成功\n");
+	}
+	else
+	{
+		printf("确认失败\n");
+	}
+	return 0;
+}
