@@ -90,3 +90,22 @@ int main()
 	}
 	return 0;
 }
+
+
+
+//写一个函数，每调用一次这个函数，就会将num的值加一
+void Add(int* p)
+{
+	(*p)++;	//*p要扩起来
+}
+int main()
+{
+	int num = 0;
+	Add(&num);
+	printf("%d\n", num);
+	Add(&num);
+	printf("%d\n", num);
+	Add(&num);
+	printf("%d\n", num);
+	return 0;
+}
