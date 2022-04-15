@@ -235,3 +235,50 @@ int main()
 	printf("a = %d\n", a);
 	return 0;
 }
+
+
+
+
+//求第n个斐波那契数   1,1,2,3,5,8,13,21,34,55....
+//int Fit(int n)
+//{
+//	if(n<3)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return Fit(n-1)+Fit(n-2);
+//	}
+//}
+////第一种用递归的方法，计算量过大，如果n为50，计算量将达到上亿
+////50
+////49 48
+////48 47 47 46
+////47 46 46 45 46 45 45 44
+////........   指数级增长
+
+//第二种用循环的方法
+int Fit(int n)
+{
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (n>2)
+	{
+		c = a+b;
+		a = b;
+		b = c;
+		n--;	
+	}
+	return c;
+}
+int main()
+{
+	int ret = 0;
+	int n = 0;
+	scanf("%d", &n);
+	ret = Fit(n);
+	printf("%d\n", ret);
+	return 0;
+}
